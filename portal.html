@@ -1,131 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Seafarer Portal</title>
+<title>Portal - Lucvia Marine</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
-background:#061626;
+background:#f5f7fa;
+}
+
+nav{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:20px;
+background:white;
+border-bottom:1px solid #e6e9ef;
+}
+
+nav a{
+text-decoration:none;
+color:#1b2a3a;
+font-size:13px;
+}
+
+.header{
+background:#0f1f2e;
 color:white;
-}
-
-header{
 text-align:center;
-padding:40px;
-background:#081c33;
-}
-
-h1{
-color:#7fd3ff;
+padding:70px 20px;
 }
 
 .container{
 max-width:900px;
 margin:auto;
-padding:30px;
+padding:40px 20px;
 }
 
-.box{
-background:#0a2440;
+.card{
+background:white;
+border:1px solid #e6e9ef;
 padding:20px;
-border:1px solid #163a63;
-border-radius:10px;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
-input{
-width:100%;
-padding:12px;
-margin:8px 0;
-background:#061626;
-border:1px solid #2aa9ff;
-color:white;
-}
-
-button{
-padding:12px;
-width:100%;
-background:#2aa9ff;
-border:none;
-color:white;
+.status{
+color:#0b5ea8;
 font-weight:bold;
-cursor:pointer;
-}
-
-.hidden{
-display:none;
-}
-
-.tag{
-display:inline-block;
-padding:5px 10px;
-background:#2aa9ff;
-border-radius:5px;
-margin-top:10px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Seafarer Portal</h1>
-<p>Lucvia Marine Crew System</p>
-</header>
+<nav>
+<a href="index.html">HOME</a>
+<a href="vacancies.html">VACANCIES</a>
+<a href="apply.html">APPLY</a>
+<a href="portal.html">PORTAL</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+
+<div class="header">
+<h1>SEAFARER PORTAL</h1>
+<p>Your applications and status</p>
+</div>
 
 <div class="container">
 
-<!-- LOGIN -->
-<div class="box" id="loginBox">
-<h3>Login to your profile</h3>
-<input id="name" placeholder="Full Name">
-<input id="id" placeholder="Seafarer ID">
-<button onclick="login()">Enter Portal</button>
+<div class="card">
+<h3>ETO - Chemical Tanker</h3>
+<p>Status: <span class="status">Under Review</span></p>
 </div>
 
-<!-- PROFILE -->
-<div class="box hidden" id="profile">
-
-<h2 id="userName"></h2>
-<span class="tag">Active Candidate</span>
-
-<h3>Profile Info</h3>
-<p>Rank: <b id="rank">Not assigned</b></p>
-<p>Last Vessel: <b>MT Example</b></p>
-
-<h3>Application Status</h3>
-<ul>
-<li>ETO - Chemical Tanker → <b style="color:#7fd3ff;">Under Review</b></li>
-<li>3rd Officer → <b style="color:#7fd3ff;">Shortlisted</b></li>
-</ul>
-
-<h3>Documents</h3>
-<ul>
-<li>Passport ✔</li>
-<li>Seaman Book ✔</li>
-<li>Certificates ✔</li>
-</ul>
-
+<div class="card">
+<h3>3rd Officer - Bulk Carrier</h3>
+<p>Status: <span class="status">Shortlisted</span></p>
 </div>
 
 </div>
-
-<script>
-function login(){
-let name=document.getElementById("name").value;
-let id=document.getElementById("id").value;
-
-if(name && id){
-document.getElementById("loginBox").style.display="none";
-document.getElementById("profile").classList.remove("hidden");
-
-document.getElementById("userName").innerText=name;
-}
-}
-</script>
 
 </body>
 </html>
