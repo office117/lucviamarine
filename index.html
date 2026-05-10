@@ -3,37 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <title>Lucvia Marine</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #071524;
+  color: white;
+}
+
+header {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #000, #071524);
+}
+
+h1 {
+  font-size: 48px;
+  letter-spacing: 3px;
+  color: gold;
+}
+
+p {
+  color: #ccc;
+  max-width: 600px;
+  margin: auto;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: gold;
+  color: black;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #0d2236;
+  padding: 20px;
+  width: 250px;
+  border: 1px solid gold;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 12px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">LUCVIA MARINE</div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="vacancies.html">Vacancies</a>
-    <a href="apply.html">Apply</a>
-  </nav>
+  <h1>LUCVIA MARINE</h1>
+  <p>Premium maritime crewing solutions connecting seafarers with global shipowners</p>
+  <button class="btn">Get Started</button>
 </header>
 
-<section class="hero">
-  <h1>International Crewing Agency</h1>
-  <p>Officers & Ratings for Tankers, Bulk & Containers</p>
-  <a class="btn" href="vacancies.html">View Vacancies</a>
-</section>
+<div class="section">
+  <h2 style="color:gold;">Our Services</h2>
 
-<section class="info">
-  <h2>About Us</h2>
-  <p>
-    Lucvia Marine provides professional seafarers for international shipping companies.
-    We focus on reliability, verified experience and fast crew placement.
-  </p>
-</section>
+  <div class="cards">
+    <div class="card">
+      <h3>Crew Management</h3>
+      <p>Professional selection of seafarers worldwide.</p>
+    </div>
+
+    <div class="card">
+      <h3>Recruitment</h3>
+      <p>Fast hiring for officers and ratings.</p>
+    </div>
+
+    <div class="card">
+      <h3>Shipowner Support</h3>
+      <p>Direct communication with maritime companies.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 style="color:gold;">Contact</h2>
+  <p>Email: office@lucviamarine.com</p>
+  <p>Phone: +380 XX XXX XXXX</p>
+</div>
 
 <footer>
-  © Lucvia Marine 2026
+  © Lucvia Marine. All rights reserved.
 </footer>
 
 </body>
