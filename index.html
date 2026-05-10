@@ -7,66 +7,92 @@
 <style>
 body {
   margin:0;
-  font-family:Arial;
-  background:#071524;
+  font-family:Arial, sans-serif;
+  background:#061626;
   color:white;
 }
 
 nav {
-  text-align:center;
+  display:flex;
+  justify-content:center;
+  gap:30px;
   padding:20px;
-  background:#06111d;
+  background:#081c33;
+  border-bottom:1px solid #0f2f55;
 }
 
 nav a {
-  color:gold;
-  margin:0 15px;
+  color:#7fd3ff;
   text-decoration:none;
-  font-weight:bold;
+  font-weight:600;
+}
+
+nav a:hover {
+  color:white;
 }
 
 .hero {
   text-align:center;
-  padding:100px 20px;
-  background:linear-gradient(180deg,#000,#071524);
+  padding:110px 20px;
+  background:linear-gradient(180deg,#04101d,#061626);
 }
 
 .hero h1 {
-  color:gold;
-  font-size:48px;
+  font-size:52px;
   margin:0;
+  letter-spacing:2px;
 }
 
 .hero p {
-  color:#ccc;
-  max-width:600px;
+  color:#b7c7d6;
+  max-width:650px;
   margin:20px auto;
+  font-size:18px;
 }
 
 .btn {
-  background:gold;
-  color:black;
-  padding:12px 25px;
+  background:#2aa9ff;
+  color:white;
+  padding:12px 26px;
   border:none;
   font-weight:bold;
-  cursor:pointer;
-  margin-top:20px;
+  border-radius:6px;
+  text-decoration:none;
   display:inline-block;
+  margin-top:20px;
+}
+
+.btn:hover {
+  background:#1f8fd8;
 }
 
 .section {
-  padding:60px 20px;
+  padding:70px 20px;
   text-align:center;
 }
 
+.section h2 {
+  color:#7fd3ff;
+  margin-bottom:40px;
+}
+
+.cards {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
 .card {
-  background:#0d2236;
-  border:1px solid gold;
-  padding:20px;
-  margin:10px;
-  display:inline-block;
-  width:250px;
+  background:#0a2440;
+  border:1px solid #163a63;
+  padding:25px;
+  width:260px;
   border-radius:10px;
+}
+
+.card h3 {
+  color:#7fd3ff;
 }
 </style>
 </head>
@@ -80,29 +106,30 @@ nav a {
 </nav>
 
 <div class="hero">
-  <h1>LUCVIA MARINE</h1>
-  <p>Premium maritime crewing solutions connecting seafarers with global shipowners.</p>
+  <h1>Lucvia Marine</h1>
+  <p>International maritime crewing agency providing reliable recruitment solutions for global shipping companies.</p>
   <a class="btn" href="vacancies.html">View Vacancies</a>
 </div>
 
 <div class="section">
-  <h2 style="color:gold;">Our Services</h2>
+  <h2>Our Services</h2>
 
-  <div class="card">
-    <h3>Crew Management</h3>
-    <p>Selection of qualified seafarers worldwide.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Crew Management</h3>
+      <p>Professional selection and placement of seafarers worldwide.</p>
+    </div>
+
+    <div class="card">
+      <h3>Recruitment</h3>
+      <p>Fast and reliable hiring for all vessel types.</p>
+    </div>
+
+    <div class="card">
+      <h3>Shipowner Support</h3>
+      <p>Direct cooperation with maritime companies.</p>
+    </div>
   </div>
-
-  <div class="card">
-    <h3>Recruitment</h3>
-    <p>Fast placement for officers and ratings.</p>
-  </div>
-
-  <div class="card">
-    <h3>Shipowner Support</h3>
-    <p>Direct solutions for maritime companies.</p>
-  </div>
-
 </div>
 
 </body>
