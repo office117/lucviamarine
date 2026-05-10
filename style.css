@@ -1,73 +1,86 @@
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: Inter, sans-serif;
   background: #0a1622;
-  color: white;
+  color: #e6edf3;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background: #071019;
+  padding: 20px 50px;
+  background: rgba(7,16,25,0.9);
+  position: sticky;
+  top: 0;
 }
 
 .logo {
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
 nav a {
-  color: white;
-  margin: 0 10px;
+  color: #9fb3c8;
+  margin: 0 12px;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00b4d8;
 }
 
 .hero {
-  padding: 80px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background: linear-gradient(#0d2538, #0a1622);
+  background: linear-gradient(135deg, #0f2a3f, #0a1622);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #9fb3c8;
 }
 
 .btn {
+  margin-top: 20px;
+  padding: 12px 25px;
   background: #00b4d8;
-  padding: 10px 15px;
   color: white;
   text-decoration: none;
-  display: inline-block;
-  margin-top: 15px;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-.grid {
-  display: flex;
-  gap: 20px;
-  padding: 40px;
-  justify-content: center;
+.btn:hover {
+  background: #0099bb;
+}
+
+.section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .card {
   background: #112436;
   padding: 20px;
-  border-radius: 10px;
-  width: 250px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border: 1px solid #1d3a52;
 }
 
-.form {
-  padding: 50px;
-  text-align: center;
-}
-
-input, textarea {
-  display: block;
-  width: 300px;
-  margin: 10px auto;
-  padding: 10px;
-}
-
-button {
-  padding: 10px 20px;
-  background: #00b4d8;
-  border: none;
-  color: white;
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+  border-color: #00b4d8;
+}color: white;
 }
