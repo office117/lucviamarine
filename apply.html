@@ -1,37 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Apply</title>
-<link rel="stylesheet" href="style.css">
+<title>Apply CV - Lucvia Marine</title>
+
+<style>
+body {
+  background:#071524;
+  color:white;
+  font-family:Arial;
+}
+
+.container {
+  max-width:600px;
+  margin:auto;
+  padding:40px;
+}
+
+input, textarea {
+  width:100%;
+  margin:10px 0;
+  padding:12px;
+  background:#0d2236;
+  border:1px solid gold;
+  color:white;
+}
+
+button {
+  background:gold;
+  border:none;
+  padding:12px;
+  width:100%;
+  font-weight:bold;
+  cursor:pointer;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">APPLY</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="vacancies.html">Vacancies</a>
-    <a href="apply.html">Apply</a>
-  </nav>
-</header>
+<div class="container">
 
-<section class="form">
+<h1 style="color:gold;">Apply for Job</h1>
 
-  <h2>Send Your CV</h2>
+<form action="https://formsubmit.co/office@lucviamarine.com" method="POST">
 
-  <form>
-    <input type="text" placeholder="Full Name">
-    <input type="email" placeholder="Email">
-    <input type="text" placeholder="Position">
-    <textarea placeholder="Message"></textarea>
+  <input type="text" name="Name" placeholder="Full Name" required>
+  <input type="text" name="Position" placeholder="Desired Position" required>
+  <input type="email" name="Email" placeholder="Email" required>
+  <input type="text" name="Phone" placeholder="Phone / WhatsApp">
 
-    <button type="submit">Submit</button>
-  </form>
+  <textarea name="Experience" placeholder="Experience / Last vessel"></textarea>
 
-</section>
+  <button type="submit">Send CV</button>
+
+</form>
+
+</div>
 
 </body>
 </html>
-<iframe src="ТВОЯ_GOOGLE_FORM_LINK" width="100%" height="700"></iframe>
