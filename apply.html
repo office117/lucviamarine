@@ -2,56 +2,94 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Apply CV</title>
+<title>Apply - Lucvia Marine</title>
 
 <style>
 body{
-background:#061626;
-color:white;
+margin:0;
 font-family:Arial;
+background:#ffffff;
+color:#1b2a3a;
+}
+
+nav{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:20px;
+border-bottom:1px solid #e6e9ef;
+background:white;
+}
+
+nav a{
+text-decoration:none;
+color:#1b2a3a;
+font-size:13px;
+}
+
+.header{
+background:#0f1f2e;
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+.header h1{
+font-weight:300;
+letter-spacing:2px;
 }
 
 .container{
-max-width:500px;
+max-width:600px;
 margin:auto;
-padding:40px;
+padding:50px 20px;
 }
 
 input, textarea{
 width:100%;
 padding:12px;
 margin:8px 0;
-background:#0a2440;
-border:1px solid #2aa9ff;
-color:white;
+border:1px solid #e6e9ef;
 }
 
 button{
 width:100%;
 padding:12px;
-background:#2aa9ff;
-border:none;
+background:#1f4e79;
 color:white;
-font-weight:bold;
+border:none;
+cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<nav>
+<a href="index.html">HOME</a>
+<a href="vacancies.html">VACANCIES</a>
+<a href="apply.html">APPLY</a>
+<a href="portal.html">PORTAL</a>
+<a href="contact.html">CONTACT</a>
+</nav>
 
-<h2>Apply for Position</h2>
+<div class="header">
+<h1>APPLICATION FORM</h1>
+<p>Submit your CV for maritime employment</p>
+</div>
+
+<div class="container">
 
 <form action="https://formsubmit.co/office@lucviamarine.com" method="POST">
 
 <input name="name" placeholder="Full Name" required>
-<input name="position" placeholder="Position" required>
+<input name="rank" placeholder="Rank / Position" required>
 <input name="email" placeholder="Email" required>
 <input name="phone" placeholder="Phone">
-<textarea name="experience" placeholder="Experience"></textarea>
 
-<button type="submit">Send CV</button>
+<textarea name="experience" placeholder="Sea Experience"></textarea>
+
+<button type="submit">Submit Application</button>
 
 </form>
 
