@@ -1,1 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact - Lucvia Marine</title>
 
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f5f7fa;
+color:#1c2b39;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:20px;
+background:white;
+border-bottom:1px solid #e5e9ef;
+}
+
+nav a{
+text-decoration:none;
+color:#1c2b39;
+font-weight:500;
+}
+
+nav a:hover{
+color:#2b6cb0;
+}
+
+/* HEADER */
+.header{
+background:#0f1f2e;
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+.header h1{
+font-size:40px;
+margin:0;
+letter-spacing:2px;
+}
+
+/* CONTAINER */
+.container{
+max-width:1000px;
+margin:auto;
+padding:60px 20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+/* BOX */
+.box{
+background:white;
+border:1px solid #e5e9ef;
+padding:30px;
+}
+
+/* CONTACT ITEMS */
+.item{
+margin-bottom:20px;
+font-size:15px;
+}
+
+.item a{
+color:#2b6cb0;
+text-decoration:none;
+}
+
+.item a:hover{
+text-decoration:underline;
+}
+
+/* FORM */
+input, textarea{
+width:100%;
+padding:12px;
+margin:8px 0;
+border:1px solid #d6dee8;
+font-family:inherit;
+}
+
+button{
+background:#1f4e79;
+color:white;
+border:none;
+padding:12px;
+width:100%;
+cursor:pointer;
+font-weight:500;
+}
+
+button:hover{
+background:#163a63;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:40px;
+font-size:12px;
+color:#8a99a8;
+border-top:1px solid #e5e9ef;
+background:white;
+}
+
+@media(max-width:768px){
+.container{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="vacancies.html">Vacancies</a>
+<a href="apply.html">Apply</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="header">
+<h1>CONTACT US</h1>
+<p>Lucvia Marine Crewing Department</p>
+</div>
+
+<div class="container">
+
+<!-- CONTACT INFO -->
+<div class="box">
+
+<h2>Company Details</h2>
+
+<div class="item">
+📞 Phone: <br>
+<a href="tel:+380636487313">+380 63 648 7313</a>
+</div>
+
+<div class="item">
+📧 Email: <br>
+<a href="mailto:office@lucviamarine.com">office@lucviamarine.com</a>
+</div>
+
+<div class="item">
+📍 Address: <br>
+Odesa, Ukraine
+</div>
+
+<div class="item">
+🌐 Working hours: <br>
+Mon - Fri, 09:00 - 18:00
+</div>
+
+<img src="https://images.unsplash.com/photo-1565689157206-0fddef7589a8" 
+style="width:100%;margin-top:20px;border-radius:6px;">
+
+</div>
+
+<!-- CONTACT FORM -->
+<div class="box">
+
+<h2>Send Message</h2>
+
+<form action="https://formsubmit.co/office@lucviamarine.com" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" rows="6"></textarea>
+
+<button type="submit">Send Request</button>
+
+</form>
+
+</div>
+
+</div>
+
+<footer>
+© Lucvia Marine. All rights reserved.
+</footer>
+
+</body>
+</html>
