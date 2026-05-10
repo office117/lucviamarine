@@ -5,94 +5,66 @@
 <title>Lucvia Marine</title>
 
 <style>
-body {
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#061626;
-  color:white;
+body{
+margin:0;
+font-family:Arial;
+background:#061626;
+color:white;
 }
 
-nav {
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  padding:20px;
-  background:#081c33;
-  border-bottom:1px solid #0f2f55;
+nav{
+display:flex;
+justify-content:center;
+gap:25px;
+padding:20px;
+background:#081c33;
 }
 
-nav a {
-  color:#7fd3ff;
-  text-decoration:none;
-  font-weight:600;
+nav a{
+color:#7fd3ff;
+text-decoration:none;
+font-weight:600;
 }
 
-nav a:hover {
-  color:white;
+.hero{
+text-align:center;
+padding:110px 20px;
+background:linear-gradient(180deg,#04101d,#061626);
 }
 
-.hero {
-  text-align:center;
-  padding:110px 20px;
-  background:linear-gradient(180deg,#04101d,#061626);
+.hero h1{
+font-size:50px;
 }
 
-.hero h1 {
-  font-size:52px;
-  margin:0;
-  letter-spacing:2px;
+.hero p{
+color:#b7c7d6;
+max-width:650px;
+margin:auto;
 }
 
-.hero p {
-  color:#b7c7d6;
-  max-width:650px;
-  margin:20px auto;
-  font-size:18px;
+.btn{
+background:#2aa9ff;
+color:white;
+padding:12px 25px;
+display:inline-block;
+margin-top:20px;
+text-decoration:none;
+border-radius:6px;
 }
 
-.btn {
-  background:#2aa9ff;
-  color:white;
-  padding:12px 26px;
-  border:none;
-  font-weight:bold;
-  border-radius:6px;
-  text-decoration:none;
-  display:inline-block;
-  margin-top:20px;
+.section{
+padding:60px 20px;
+text-align:center;
 }
 
-.btn:hover {
-  background:#1f8fd8;
-}
-
-.section {
-  padding:70px 20px;
-  text-align:center;
-}
-
-.section h2 {
-  color:#7fd3ff;
-  margin-bottom:40px;
-}
-
-.cards {
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:20px;
-}
-
-.card {
-  background:#0a2440;
-  border:1px solid #163a63;
-  padding:25px;
-  width:260px;
-  border-radius:10px;
-}
-
-.card h3 {
-  color:#7fd3ff;
+.card{
+background:#0a2440;
+padding:20px;
+margin:10px;
+display:inline-block;
+width:250px;
+border-radius:10px;
+border:1px solid #163a63;
 }
 </style>
 </head>
@@ -100,36 +72,35 @@ nav a:hover {
 <body>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="vacancies.html">Vacancies</a>
-  <a href="apply.html">Apply CV</a>
+<a href="index.html">Home</a>
+<a href="vacancies.html">Vacancies</a>
+<a href="apply.html">Apply CV</a>
 </nav>
 
 <div class="hero">
-  <h1>Lucvia Marine</h1>
-  <p>International maritime crewing agency providing reliable recruitment solutions for global shipping companies.</p>
-  <a class="btn" href="vacancies.html">View Vacancies</a>
+<h1>Lucvia Marine</h1>
+<p>International crewing agency providing reliable maritime recruitment worldwide.</p>
+<a class="btn" href="vacancies.html">Open Vacancies</a>
 </div>
 
 <div class="section">
-  <h2>Our Services</h2>
+<h2>Services</h2>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Crew Management</h3>
-      <p>Professional selection and placement of seafarers worldwide.</p>
-    </div>
+<div class="card">
+<h3>Crew Management</h3>
+<p>Worldwide seafarer placement.</p>
+</div>
 
-    <div class="card">
-      <h3>Recruitment</h3>
-      <p>Fast and reliable hiring for all vessel types.</p>
-    </div>
+<div class="card">
+<h3>Recruitment</h3>
+<p>Fast hiring for all ranks.</p>
+</div>
 
-    <div class="card">
-      <h3>Shipowner Support</h3>
-      <p>Direct cooperation with maritime companies.</p>
-    </div>
-  </div>
+<div class="card">
+<h3>Shipowners</h3>
+<p>Direct cooperation with companies.</p>
+</div>
+
 </div>
 
 </body>
