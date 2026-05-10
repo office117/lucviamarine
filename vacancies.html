@@ -1,135 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Vacancies - Lucvia Marine</title>
+<title>Vacancies</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #071524;
-  color: white;
+body{
+margin:0;
+font-family:Arial;
+background:#061626;
+color:white;
 }
 
-header {
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(180deg, #000, #071524);
+nav{
+text-align:center;
+padding:20px;
+background:#081c33;
 }
 
-h1 {
-  color: gold;
-  letter-spacing: 2px;
+nav a{
+color:#7fd3ff;
+margin:10px;
+text-decoration:none;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
+.search{
+text-align:center;
+margin:20px;
 }
 
-.vacancy {
-  background: #0d2236;
-  border-left: 4px solid gold;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 8px;
+input, select{
+padding:10px;
+width:200px;
+margin:5px;
 }
 
-.vacancy h3 {
-  margin: 0;
-  color: gold;
-}
-
-.meta {
-  color: #bbb;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 15px;
-  background: gold;
-  color: black;
-  font-weight: bold;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: #ffd700;
-}
-
-.back {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.back a {
-  color: gold;
-  text-decoration: none;
+.vacancy{
+background:#0a2440;
+margin:10px auto;
+padding:15px;
+width:80%;
+border-left:4px solid #2aa9ff;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>OPEN VACANCIES</h1>
-  <p>Lucvia Marine Crew Recruitment</p>
-</header>
+<nav>
+<a href="index.html">Home</a>
+<a href="vacancies.html">Vacancies</a>
+<a href="apply.html">Apply CV</a>
+</nav>
 
-<div class="container">
+<div class="search">
+<input id="search" onkeyup="filter()" placeholder="Search position...">
 
-  <div class="vacancy">
-    <h3>ETO - Chemical Tanker</h3>
-    <div class="meta">Salary: 6000 USD | Contract: 4±1 months | Join: ASAP</div>
-    <a class="btn" href="mailto:office@lucviamarine.com?subject=Application ETO Chemical Tanker">Apply</a>
-  </div>
-
-  <div class="vacancy">
-    <h3>3rd Officer - Bulk Carrier</h3>
-    <div class="meta">Salary: 3500 USD | Contract: 6 months | Join: ASAP</div>
-    <a class="btn" href="mailto:office@lucviamarine.com?subject=Application 3rd Officer Bulk Carrier">Apply</a>
-  </div>
-
-  <div class="vacancy">
-    <h3>AB Seaman - Container Vessel</h3>
-    <div class="meta">Salary: 2000 USD | Contract: 6±1 months | Join: ASAP</div>
-    <a class="btn" href="mailto:office@lucviamarine.com?subject=Application AB Seaman Container Vessel">Apply</a>
-  </div>
-
+<select id="filter" onchange="filter()">
+<option value="all">All</option>
+<option value="deck">Deck</option>
+<option value="engine">Engine</option>
+<option value="officer">Officer</option>
+</select>
 </div>
 
-<div class="back">
-  <a href="index.html">← Back to Home</a>
+<div id="list">
+
+<div class="vacancy engine">
+ETO - Chemical Tanker | 6000 USD
 </div>
 
-</body>
-</html>
-<div style="text-align:center; margin:20px;">
-  <select id="filter" onchange="filterJobs()" style="padding:10px;">
-    <option value="all">All positions</option>
-    <option value="deck">Deck</option>
-    <option value="engine">Engine</option>
-    <option value="officer">Officers</option>
-  </select>
+<div class="vacancy officer">
+3rd Officer - Bulk Carrier | 3500 USD
+</div>
+
+<div class="vacancy deck">
+AB Seaman - Container Vessel | 2000 USD
+</div>
+
 </div>
 
 <script>
-function filterJobs() {
-  let value = document.getElementById("filter").value;
-  let items = document.querySelectorAll(".vacancy");
+function filter(){
+let input=document.getElementById("search").value.toLowerCase();
+let filter=document.getElementById("filter").value;
+let items=document.querySelectorAll(".vacancy");
 
-  items.forEach(el => {
-    if (value === "all" || el.classList.contains(value)) {
-      el.style.display = "block";
-    } else {
-      el.style.display = "none";
-    }
-  });
+items.forEach(el=>{
+let text=el.innerText.toLowerCase();
+let matchText=text.includes(input);
+let matchFilter=filter==="all"||el.classList.contains(filter);
+
+el.style.display=(matchText&&matchFilter)?"block":"none";
+});
 }
 </script>
+
+</body>
+</html>
