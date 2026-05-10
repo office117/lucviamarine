@@ -1,46 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Vacancies</title>
+<title>Vacancies - Lucvia Marine</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
-background:#061626;
-color:white;
+background:#ffffff;
+color:#1b2a3a;
 }
 
+/* NAV */
 nav{
-text-align:center;
+display:flex;
+justify-content:center;
+gap:30px;
 padding:20px;
-background:#081c33;
+background:white;
+border-bottom:1px solid #e6e9ef;
 }
 
 nav a{
-color:#7fd3ff;
-margin:10px;
 text-decoration:none;
+color:#1b2a3a;
+font-size:13px;
+letter-spacing:1px;
 }
 
-.search{
+nav a:hover{
+color:#0b5ea8;
+}
+
+/* HEADER */
+.header{
+background:#0f1f2e;
+color:white;
 text-align:center;
-margin:20px;
+padding:80px 20px;
 }
 
-input, select{
-padding:10px;
-width:200px;
-margin:5px;
+.header h1{
+font-weight:300;
+letter-spacing:2px;
+margin:0;
 }
 
-.vacancy{
-background:#0a2440;
-margin:10px auto;
-padding:15px;
-width:80%;
-border-left:4px solid #2aa9ff;
+.header p{
+color:#cbd5e0;
+margin-top:10px;
+}
+
+/* SEARCH BAR */
+.search{
+max-width:1000px;
+margin:40px auto 20px;
+display:flex;
+gap:10px;
+padding:0 20px;
+}
+
+.search input, .search select{
+padding:12px;
+border:1px solid #e6e9ef;
+width:100%;
+}
+
+/* TABLE STYLE JOBS */
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+
+.job{
+background:white;
+border:1px solid #e6e9ef;
+padding:20px;
+margin-bottom:12px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.job h3{
+margin:0;
+font-size:16px;
+font-weight:500;
+}
+
+.meta{
+color:#5c6b7a;
+font-size:13px;
+margin-top:5px;
+}
+
+.btn{
+background:#1f4e79;
+color:white;
+border:none;
+padding:10px 15px;
+cursor:pointer;
+font-size:13px;
+}
+
+.btn:hover{
+background:#163a63;
 }
 </style>
 </head>
@@ -48,13 +114,21 @@ border-left:4px solid #2aa9ff;
 <body>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="vacancies.html">Vacancies</a>
-<a href="apply.html">Apply CV</a>
+<a href="index.html">HOME</a>
+<a href="vacancies.html">VACANCIES</a>
+<a href="apply.html">APPLY</a>
+<a href="portal.html">PORTAL</a>
+<a href="contact.html">CONTACT</a>
 </nav>
 
+<div class="header">
+<h1>VACANCIES</h1>
+<p>Available maritime positions worldwide</p>
+</div>
+
+<!-- SEARCH -->
 <div class="search">
-<input id="search" onkeyup="filter()" placeholder="Search position...">
+<input type="text" id="search" onkeyup="filter()" placeholder="Search position...">
 
 <select id="filter" onchange="filter()">
 <option value="all">All</option>
@@ -64,18 +138,31 @@ border-left:4px solid #2aa9ff;
 </select>
 </div>
 
-<div id="list">
+<!-- JOB LIST -->
+<div class="container" id="list">
 
-<div class="vacancy engine">
-ETO - Chemical Tanker | 6000 USD
+<div class="job engine">
+<div>
+<h3>ETO - Chemical Tanker</h3>
+<div class="meta">6000 USD | 4±1 months</div>
+</div>
+<button class="btn">Apply</button>
 </div>
 
-<div class="vacancy officer">
-3rd Officer - Bulk Carrier | 3500 USD
+<div class="job officer">
+<div>
+<h3>3rd Officer - Bulk Carrier</h3>
+<div class="meta">3500 USD | 6 months</div>
+</div>
+<button class="btn">Apply</button>
 </div>
 
-<div class="vacancy deck">
-AB Seaman - Container Vessel | 2000 USD
+<div class="job deck">
+<div>
+<h3>AB Seaman - Container Vessel</h3>
+<div class="meta">2000 USD | 6±1 months</div>
+</div>
+<button class="btn">Apply</button>
 </div>
 
 </div>
@@ -84,14 +171,15 @@ AB Seaman - Container Vessel | 2000 USD
 function filter(){
 let input=document.getElementById("search").value.toLowerCase();
 let filter=document.getElementById("filter").value;
-let items=document.querySelectorAll(".vacancy");
+let items=document.querySelectorAll(".job");
 
 items.forEach(el=>{
 let text=el.innerText.toLowerCase();
-let matchText=text.includes(input);
-let matchFilter=filter==="all"||el.classList.contains(filter);
 
-el.style.display=(matchText&&matchFilter)?"block":"none";
+let matchText=text.includes(input);
+let matchFilter=filter==="all" || el.classList.contains(filter);
+
+el.style.display=(matchText && matchFilter) ? "flex" : "none";
 });
 }
 </script>
