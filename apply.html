@@ -2,37 +2,37 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Apply CV - Lucvia Marine</title>
+<title>Apply CV</title>
 
 <style>
-body {
-  background:#071524;
-  color:white;
-  font-family:Arial;
+body{
+background:#061626;
+color:white;
+font-family:Arial;
 }
 
-.container {
-  max-width:600px;
-  margin:auto;
-  padding:40px;
+.container{
+max-width:500px;
+margin:auto;
+padding:40px;
 }
 
-input, textarea {
-  width:100%;
-  margin:10px 0;
-  padding:12px;
-  background:#0d2236;
-  border:1px solid gold;
-  color:white;
+input, textarea{
+width:100%;
+padding:12px;
+margin:8px 0;
+background:#0a2440;
+border:1px solid #2aa9ff;
+color:white;
 }
 
-button {
-  background:gold;
-  border:none;
-  padding:12px;
-  width:100%;
-  font-weight:bold;
-  cursor:pointer;
+button{
+width:100%;
+padding:12px;
+background:#2aa9ff;
+border:none;
+color:white;
+font-weight:bold;
 }
 </style>
 </head>
@@ -41,18 +41,17 @@ button {
 
 <div class="container">
 
-<h1 style="color:gold;">Apply for Job</h1>
+<h2>Apply for Position</h2>
 
 <form action="https://formsubmit.co/office@lucviamarine.com" method="POST">
 
-  <input type="text" name="Name" placeholder="Full Name" required>
-  <input type="text" name="Position" placeholder="Desired Position" required>
-  <input type="email" name="Email" placeholder="Email" required>
-  <input type="text" name="Phone" placeholder="Phone / WhatsApp">
+<input name="name" placeholder="Full Name" required>
+<input name="position" placeholder="Position" required>
+<input name="email" placeholder="Email" required>
+<input name="phone" placeholder="Phone">
+<textarea name="experience" placeholder="Experience"></textarea>
 
-  <textarea name="Experience" placeholder="Experience / Last vessel"></textarea>
-
-  <button type="submit">Send CV</button>
+<button type="submit">Send CV</button>
 
 </form>
 
