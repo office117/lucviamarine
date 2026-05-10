@@ -2,38 +2,111 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Vacancies</title>
-<link rel="stylesheet" href="style.css">
+<title>Vacancies - Lucvia Marine</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #071524;
+  color: white;
+}
+
+header {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #000, #071524);
+}
+
+h1 {
+  color: gold;
+  letter-spacing: 2px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.vacancy {
+  background: #0d2236;
+  border-left: 4px solid gold;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.vacancy h3 {
+  margin: 0;
+  color: gold;
+}
+
+.meta {
+  color: #bbb;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #ffd700;
+}
+
+.back {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.back a {
+  color: gold;
+  text-decoration: none;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">VACANCIES</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="vacancies.html">Vacancies</a>
-    <a href="apply.html">Apply</a>
-  </nav>
+  <h1>OPEN VACANCIES</h1>
+  <p>Lucvia Marine Crew Recruitment</p>
 </header>
 
-<section class="grid">
+<div class="container">
 
-  <div class="card">
-    <h3>ETO – Chemical Tanker</h3>
-    <p>6000 USD</p>
-    <p>4 ±1 months</p>
-    <a class="btn" href="apply.html">Apply</a>
+  <div class="vacancy">
+    <h3>ETO - Chemical Tanker</h3>
+    <div class="meta">Salary: 6000 USD | Contract: 4±1 months | Join: ASAP</div>
+    <a class="btn" href="mailto:office@lucviamarine.com?subject=Application ETO Chemical Tanker">Apply</a>
   </div>
 
-  <div class="card">
-    <h3>3rd Engineer – Bulk Carrier</h3>
-    <p>3500 USD</p>
-    <p>6 months</p>
-    <a class="btn" href="apply.html">Apply</a>
+  <div class="vacancy">
+    <h3>3rd Officer - Bulk Carrier</h3>
+    <div class="meta">Salary: 3500 USD | Contract: 6 months | Join: ASAP</div>
+    <a class="btn" href="mailto:office@lucviamarine.com?subject=Application 3rd Officer Bulk Carrier">Apply</a>
   </div>
 
-</section>
+  <div class="vacancy">
+    <h3>AB Seaman - Container Vessel</h3>
+    <div class="meta">Salary: 2000 USD | Contract: 6±1 months | Join: ASAP</div>
+    <a class="btn" href="mailto:office@lucviamarine.com?subject=Application AB Seaman Container Vessel">Apply</a>
+  </div>
+
+</div>
+
+<div class="back">
+  <a href="index.html">← Back to Home</a>
+</div>
 
 </body>
 </html>
